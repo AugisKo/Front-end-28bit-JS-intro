@@ -15,3 +15,11 @@ KONCEPTAI
 5) ivykiai - uzsikrove puslapis, paspaude klaviaturos mygtuka, paspaude peles mygtuka, pradejo siusti faija, pabaige siusti faila, issiunte uzklausa ir t.t. 
 6) oop (object orienting programming)  - objektinis programavimas (tai tik skonio reikalas)
 */
+
+console.log('Labas, ka tu?');
+
+console.log("Labas, ka tu?");
+
+console.log(45645);
+
+console.log('Man yra', 99, 'metai' );
