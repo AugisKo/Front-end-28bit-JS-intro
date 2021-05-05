@@ -35,10 +35,10 @@ console.log(pazymiai);
 
 const zodynas = ['labas', 'rytas', 'sakau', 'tau']; /*lauztyniai sklaisutai zymi sarasus*/
 console.log(zodynas);
-
+/*
 const petras = {
     vardas: 'Petras'
-    amzius: 99,
+    metai: 99,
     gyvenamojiVieta: 'Gatve g. 1-3, Miestas',
     vaikai: [
         {
