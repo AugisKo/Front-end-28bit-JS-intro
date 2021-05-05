@@ -58,6 +58,16 @@ const HTML = '<header>\n\
 </header>';
 console.log(HTML);
 
+const H0 = `<header>` +
+            `<nav>` +
+                `<a></a>`+
+                `<a></a>`+
+                `<a></a>`+
+                `<a></a>`+
+            `</nav>`+
+            `<header>`;
+/* auksciau rodomas buda geriau nenaudoti*/
+
 const H2 = `<header>
     <img src="${imgSrc}" alt="logo" class="logo">
     <nav>
