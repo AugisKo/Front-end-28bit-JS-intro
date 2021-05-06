@@ -1,10 +1,10 @@
 /*
 Objektas yra key-value poru rinkinys (raktazodsi-reiksme
-*/)
+*/
 
 const petras = {
 name: 'Petras',
-age: 99
+age: 99,
 'likes banana': true
 };
 
@@ -12,7 +12,7 @@ console.log(petras);
 
 const maryte = {
     name: 'Maryte',
-    age: 87
+    age: 87,
     likesBanana: false
     };
     
@@ -77,3 +77,5 @@ Gyvunu prekiu parduotuve:
         adresas,
         darbo laikas,
         asortimentas (pavadinimas, kiekis)
+
+*/
