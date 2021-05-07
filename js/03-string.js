@@ -80,4 +80,9 @@ const H2 = `<header>
 
 console.log(H2);
 
-const 
+const demo = 'asd ${imgSrc} asd';
+console.log(demo);
+
+const hi = 'Good morning!';
+const hiSize = hi.length;
+console.log(hi, hiSize);
