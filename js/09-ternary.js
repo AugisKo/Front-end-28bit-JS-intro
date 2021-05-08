@@ -35,6 +35,7 @@ if (4 < 2) {
 console.log(s3);
 
 console.log ('---------------------------');
+
 /*
 Nestintas Ternary
 */

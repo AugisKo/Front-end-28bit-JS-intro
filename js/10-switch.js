@@ -40,10 +40,12 @@ switch(day) {
     case 5:
         console.log('Darbo diena');
         break;
+
     case 6:
     case 7:
         console.log('Savaitgalis');
-        break;   
+        break; 
+
     default:
         console.log('Neatpazinta savaite diena');
         break;
@@ -60,12 +62,12 @@ if (day === 1 ||
 } else  {console.log('Neatpazinta savaites diena'); 
 }
 
-if (day >= 0 && 
-    day < 6) {
+if (day >= 0 && day < 6) {
     console.log('Darbo diena');
 } else if (day >= 6 && day < 7) {
-        console.log('Savaitgalis');
-} else  {console.log('Neatpazinta savaites diena'); 
+    console.log('Savaitgalis');
+} else  {
+    console.log('Neatpazinta savaites diena'); 
 }
 
 console.log ('------------');
@@ -83,54 +85,60 @@ Arbatos ruosimo procesas
 const processStep = 0;
 
 switch (processStep){
-case 0:
+    case 0:
         console.log('paimti puodeli');
-case 1:
-            console.log('isideti arbatos');
-case 2:
-                console.log('isideti saldykli');
-case 3:
-                    console.log('uzpilti vandens');
-case 4:
-                        console.log('ismaisyti');
-case 5:
-                            console.log('gerti');
-break;
+    
+    case 1:
+        console.log('isideti arbatos');
 
-default:
-                                console.log('Neatpazintas procesas');
-break;
+    case 2:
+        console.log('isideti saldykli');
+
+    case 3:
+        console.log('uzpilti vandens');
+
+    case 4:
+        console.log('ismaisyti');
+
+    case 5:
+        console.log('gerti');
+        break;
+
+    default:
+        console.log('Neatpazintas procesas');
+        break;
 }
 
-console.log(processStep);
+console.log('------------------');
 
-const stotele = 'Geniu';
+const stotele = 'Rudens2';
 
-switch (stotele)
- {
+switch (stotele) {
     case 'Geniu':
-       console.log('Geniu');
+        console.log('Geniu');
     case 'Tremtiniu':
         console.log('Tremtiniu');
     case 'Rudens':
         console.log('Rudens');
-    case 'K. Mindaugo': 
+    case 'K. Mindaugo':
         console.log('K. Mindaugo');
     case 'Z. Tiltas':
         console.log('Z. Tiltas');
         break;
-    
+
     case 'Lvovo':
         console.log('Lvovo');
-    case 'Tremtiniu2':
-        console.log('Tremtiniu2');
+    case 'Vasaros':
+        console.log('Vasaros');
     case 'Rudens2':
         console.log('Rudens2');
-    case 'N.V. Ziedas': 
-        console.log('N.V. Ziedas');
+    case 'Tremtiniu2':
+        console.log('Tremtiniu2');
+    case 'N.V.Ziedas':
+        console.log('N.V.Ziedas');
         break;
 
     default:
-        console.log('Neatpazinta stotele')
+        console.log('Neatpazinta stotele');
         break;
- }
+}

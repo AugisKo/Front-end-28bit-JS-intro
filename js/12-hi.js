@@ -9,7 +9,7 @@ pvz.: Labas, as esu Vardenis!
 //Maryte -> Labas, as esu Maryte!
 
 function hi(vardas) {
-        return `Labas, as esu ${vardas}!`; //reikia naudoti tika
+    return `Labas, as esu ${vardas}!`;
 }
 
 const hiVardenis = hi('Vardenis');
@@ -21,3 +21,5 @@ console.log(hiJonas);
 const hiMaryte = hi('Maryte');
 console.log(hiMaryte);
 
+const hiOnute = hi('Onute');
+console.log(hiOnute);

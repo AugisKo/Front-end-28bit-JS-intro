@@ -8,18 +8,25 @@ jeigu, dabar yra 19:00 iki 23:59 -> vakaras
 
 */
 
-function parosMetas (val, min) {
-    if (val < 5) { return 'naktis';
+function parosMetas(val, min) {
+    if (val < 5) { 
+        return 'naktis';
     }
 
-    if {(val < 11) { return 'rytas';
+    if (val < 11) { 
+        return 'rytas';
     }
 
-    if (val < 19) { return 'diena';
+    if (val < 19) { 
+        return 'diena';
     }
 
-    if (val < 24) { return 'vakaras';
+    if (val < 24) { 
+        return 'vakaras';
     }
 }
 
+console.log(parosMetas(2, 39), '->', 'naktis');
+console.log(parosMetas(10, 39), '->', 'rytas');
 console.log(parosMetas(18, 39), '->', 'diena');
+console.log(parosMetas(23, 39), '->', 'vakaras');

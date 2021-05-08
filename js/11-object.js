@@ -15,54 +15,62 @@ const maryte = {
     age: 87,
     likesBanana: false
     };
+
+console.log(petras.name, petras.age, petras.color);
+
+console.log(petras["name"]);
+console.log(petras["age"]);
+console.log(petras["color"]);
+console.log(petras["likes banana"]);
     
-   /* console.log(petras.age);
-    console.log(maryte.age);
-    console.log(petras.name);
-    console.log(maryte.name);
-*/
-    const gyventojai = [petras, maryte];
+console.log('--------------');    
 
-    console.log(gyventojai[0]);
-    console.log(gyventojai[1]);
-    console.log(gyventojai[0].name);
-    console.log(gyventojai[1].age);
+// console.log(petras.age);
+// console.log(maryte.age);
+// console.log(petras.name);
+// console.log(maryte.name);
 
-    const batas = {
-        name: 'Kaliosas 3000',
-        color: 'red',
-        pricing: [
-            {
-                country: 'LT',
-                price: 99
-            },
-            {
-                country: 'LV',
-                price: 89
-            },
-            {
-                country: 'EE',
-                price: 199
-            }
+const gyventojai = [petras, maryte];
 
-        ]
-    }
+console.log(gyventojai[0]);
+console.log(gyventojai[1]);
+console.log(gyventojai[0].name);
+console.log(gyventojai[1].age);
 
-    console.log(batas.pricing[0]);
-    console.log(batas.pricing[1]);
-    console.log(batas.pricing[2]);
-
-    const kepure = {
-        name: 'Skrybele',
-        color: 'Balta',
-        pricing: {
-            lt: 99,
-            lv: 89,
-            ee: 199
+const batas = {
+    name: 'Kaliosas 3000',
+    color: 'red',
+    pricing: [
+        {
+            country: 'LT',
+            price: 99
+        },
+        {
+            country: 'LV',
+            price: 89
+        },
+        {
+            country: 'EE',
+            price: 199
         }
+    ]
+}
+
+console.log(batas.pricing[0]);
+console.log(batas.pricing[1]);
+console.log(batas.pricing[2]);
+
+const kepure = {
+    name: 'Skrybele',
+    color: 'Balta',
+    pricing: {
+        lt: 99,
+        lv: 89,
+        ee: 199
     }
+}
     
-    console.log(kepure.pricing.lt)
+console.log(kepure.pricing.lt)
 
     /* 
 Gyvunas: 
