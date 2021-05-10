@@ -448,13 +448,36 @@ function bricks(sienuPlociai, sienosAukstis, plytosAukstis, plytosPlotis){
   for (i=0; i < sienuPlociai.length; i++) {
     visoSienu += sienuPlociai[i];
   } console.log(visoSienu);
-  return visoPlytu = visoSienu/plytosPlotis * sienosAukstis/plytosAukstis;
+  const VisoPlytuH = Math.ceil(visoSienu/plytosPlotis);
+  const VisoPlytuV = Math.ceil(sienosAukstis/plytosAukstis);
+  return visoPlytu = VisoPlytuH * VisoPlytuV;
   }
 
 console.log(bricks([1, 2], 1, 0.1, 0.2), '->', 150);
 console.log(bricks([1, 1, 1], 1, 0.1, 0.2), '->', 150);
 console.log(bricks([2, 1, 3], 0.5, 0.1, 0.2), '->', 150);
+console.log(bricks([1.05], 1.05, 0.1, 0.2), '->', 66);
 
-console.log('--------------  ---------------')
+// Math.Ceil() - apvalina i didesni sveika skaiciu 
+// Math.Floor() - apvalina i mazesni sveika skaiciu
+// Math.Round() - i artimesni sveika skaiciu
 
-/* 
+console.log('-------------- Pienas ---------------')
+
+/*
+
+Gaminame pieno kokteilius:
+  - gauname uzsakymu kieki per diena (vienetais)
+  - gauname vienos porcijos dydi (litrais)
+  - vienos karves duodamo pieno kiekis per diena (litrais)
+  - reikia rasti, kiek reikia tureti karviu, norint patenkinti visus uzsakymus?
+
+*/
+
+function milk() {
+
+
+}
+
+console.log(milk(10, 0.5, 9), '->', 1);
+console.log(milk(100, 0.5, 9), '->', 6);
