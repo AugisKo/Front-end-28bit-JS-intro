@@ -474,7 +474,10 @@ Gaminame pieno kokteilius:
 
 */
 
-function milk() {
+function milk(uzskKiekisPerDiena, porcijosDydis, gaunamoPienoKiekis ) {
+const reikiamoPienoKiekis = uzskKiekisPerDiena * porcijosDydis;
+const reikiaKarviu = reikiamoPienoKiekis / gaunamoPienoKiekis;
+return Math.ceil(reikiaKarviu); 
 
 
 }
