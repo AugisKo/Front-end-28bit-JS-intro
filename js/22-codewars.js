@@ -444,9 +444,17 @@ PLYTOS
 */
 
 function bricks(sienuPlociai, sienosAukstis, plytosAukstis, plytosPlotis){
+  let visoSienu=0;
+  for (i=0; i < sienuPlociai.length; i++) {
+    visoSienu += sienuPlociai[i];
+  } console.log(visoSienu);
+  return visoPlytu = visoSienu/plytosPlotis * sienosAukstis/plytosAukstis;
+  }
 
-}
+console.log(bricks([1, 2], 1, 0.1, 0.2), '->', 150);
+console.log(bricks([1, 1, 1], 1, 0.1, 0.2), '->', 150);
+console.log(bricks([2, 1, 3], 0.5, 0.1, 0.2), '->', 150);
 
-console.log(bricks([1,2], 1, [0.1, 0.2]), '->', )
+console.log('--------------  ---------------')
 
-
+/* 
