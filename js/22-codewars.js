@@ -182,34 +182,14 @@ function arrayMadness(a, b) {
 
     let kvadratuSuma = 0;
     let kubuSuma = 0;
-
-    //einame per pirma sarasa
+ 
     for (let i=0; i < a.length; i++) {
-        const element = a[i];
-        kvadratuSuma = element*element;
+        kvadratuSuma += a[i]**2;
     }
-
     for (let i=0; i < b.length; i++) {
-        const element = b[i];
-        kubuSuma = element*element*element;
+        kubuSuma += b[i]**3;
     }
-
-    if (kvadratuSuma > kubuSuma) { return true;
-    } else { return false;}
-
-
-        //pasiimame skaiciu
-        //prisumuojame skaiciaus kvadrata
-
-    //einame per antra sarasa
-        //pasiimame skaiciu
-        //prisumuojame skaiciaus kuba
-    
-    //jei kvadratu suma didesne uz kubu suma
-        // graziname true
-    // jei ne
-        // graziname false
-
+    return kvadratuSuma > kubuSuma;
   }
 
 
@@ -224,4 +204,44 @@ console.log(arrayMadness([2,5,3,4,1],[3,3,3,3,3]), false);
 console.log(arrayMadness([1,3,5,2,4],[2,2,2,2,2,2,2,1]), false);
 console.log(arrayMadness([1,2,3,4,5],[2,2,2,2,2,2,1,1,1]), true);
 console.log(arrayMadness([2,4,6,8,10,12,14],[1,3,5,7,9,11,13]), false);
-  
+
+console.log('---------------------------------------------');
+
+/*
+
+There are 32 letters in the Polish alphabet: 9 vowels and 23 consonants.
+
+Your task is to change the letters with diacritics:
+
+ą -> a,
+ć -> c,
+ę -> e,
+ł -> l,
+ń -> n,
+ó -> o,
+ś -> s,
+ź -> z,
+ż -> z
+and print out the string without the use of the Polish letters.
+
+For example:
+
+"Jędrzej Błądziński"  -->  "Jedrzej Bladzinski"
+
+*/
+
+function correctPolishLetters (string) {
+   let convertedString = '';
+   
+    // einame per raides
+        // paimu raide
+        // jeigu raide yra ne lenkiska
+            // tiesiog pridedame prie convertedString
+        // jeigu lenkiska -pridedame prie vonvertedString atitinkama lotiniska tos raides versija
+
+    return convertedString;
+}
+
+console.log(correctPolishLetters("Jędrzej Błądziński"),"Jedrzej Bladzinski");
+console.log(correctPolishLetters("Lech Wałęsa"),"Lech Walesa");
+console.log(correctPolishLetters("Maria Skłodowska-Curie"),"Maria Sklodowska-Curie");
