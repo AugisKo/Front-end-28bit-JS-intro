@@ -138,7 +138,7 @@ function countSheeps(arrayOfSheep) {
                 
   console.log(countSheeps(array1) == 17, "There are 17 sheeps in total")
 
-  
+  console.log('------- Masyve esanciu pozytiviu skaitmenu suma --------------');   
 
 /*
   You get an array of numbers, return the sum of all of the positives ones.
@@ -165,6 +165,9 @@ console.log(positiveSum([1,-2,3,4,5]), '->', 13);
 console.log(positiveSum([]), '->', 0);
 console.log(positiveSum([-1,-2,-3,-4,-5]), '->', 0);
 console.log(positiveSum([-1,2,3,4,-5]), '->', 9);
+
+console.log('------- Dvieju masyvu palyginimas --------------'); 
+
 
 /* SpeedCode #2 - Array Madness
 
@@ -205,7 +208,7 @@ console.log(arrayMadness([1,3,5,2,4],[2,2,2,2,2,2,2,1]), false);
 console.log(arrayMadness([1,2,3,4,5],[2,2,2,2,2,2,1,1,1]), true);
 console.log(arrayMadness([2,4,6,8,10,12,14],[1,3,5,7,9,11,13]), false);
 
-console.log('---------------------------------------------');
+console.log('------- Lenkisku raidziu keitimas 1 --------------'); 
 
 /*
 
@@ -232,16 +235,218 @@ For example:
 
 function correctPolishLetters (string) {
    let convertedString = '';
+   for (i=0; i < string.length; i++) {
+       const raide = string[i];
+
+       switch (raide) {
+            case 'ą': convertedString += 'a'; break;
+            case 'ć': convertedString += 'c'; break;
+            case 'ę': convertedString += 'e'; break; 
+            case 'ł': convertedString += 'l'; break; 
+            case 'ń': convertedString += 'n'; break; 
+            case 'ó': convertedString += 'o'; break;
+            case 'ś': convertedString += 's'; break; 
+            case 'ź': convertedString += 'z'; break; 
+            case 'ż': convertedString += 'z'; break; 
+                                
+            default:
+                convertedString += raide; break;
+        }
+   }
+   return convertedString;
+}
+
+console.log(correctPolishLetters("Jędrzej Błądziński"), '->', "Jedrzej Bladzinski");
+console.log(correctPolishLetters("Lech Wałęsa"), '->', "Lech Walesa");
+console.log(correctPolishLetters("Maria Skłodowska-Curie"), '->', "Maria Sklodowska-Curie");
+
    
+console.log('------- Lenkisku raidziu keitimas 2 --------------'); 
+
+function correctPolishLetters (string) {
+
+    let convertedString = '';
+    const polish = ['ą', 'ć', 'ę', 'ł', 'ń', 'ó', 'ś', 'ź', 'ż'];
+    const latin = ['a', 'c', 'e', 'l', 'n', 'o', 's', 'z', 'z'];
+
+    for (let i = 0; i < string.length; i++) {
+        const raide = string[i];
+        let convertedletter = raide;
+
+        for (let p = 0; p < polish.length; p++) {
+            const polishletter = polish[p];
+
+            if(polishletter === convertedletter) {
+                convertedletter = latin[p];
+            }
+        }
+        convertedString += convertedletter;
+    }
+
+    return convertedString;
+
+    }
     // einame per raides
         // paimu raide
         // jeigu raide yra ne lenkiska
             // tiesiog pridedame prie convertedString
         // jeigu lenkiska -pridedame prie vonvertedString atitinkama lotiniska tos raides versija
 
-    return convertedString;
+
+
+
+console.log(correctPolishLetters("Jędrzej Błądziński"), '->', "Jedrzej Bladzinski");
+console.log(correctPolishLetters("Lech Wałęsa"), '->', "Lech Walesa");
+console.log(correctPolishLetters("Maria Skłodowska-Curie"), '->', "Maria Sklodowska-Curie");
+
+
+console.log('------- Raidziu skaicius zodije --------------');
+
+/*
+This Kata is intended as a small challenge for my students
+
+All Star Code Challenge #18
+
+Create a function that accepts 2 string arguments and returns an integer of the count of occurrences the 2nd argument is found in the first one.
+
+If no occurrences can be found, a count of 0 should be returned.
+
+Example (Inputs --> Output)
+
+"Hello", 'o' => 1
+"Hello", 'l' => 2
+"", 'z'      => 0
+Notes:
+
+The first argument can be an empty string
+The second string argument will always be of length 1
+
+*/
+
+function strCount(str, letter){  
+    let total = 0;
+    let total1 = 0; 
+    let letter1 = 1;
+    for (i = 0; i < str.length; i++) {
+        if (str[i] === letter) {total++}
+    }
+    return total;
+  }
+
+
+console.log(strCount('Hello', 'o'), 1);
+console.log(strCount('Hello', 'l'), 2);
+console.log(strCount('', 'z'), 0);
+
+
+/*
+In this Kata we are passing a number (n) into a function.
+Your code will determine if the number passed is even (or not).
+The function needs to return either a true or false.
+Numbers may be positive or negative, integers or floats.
+Floats are considered UNeven for this kata.
+*/
+
+function testEven(n) {
+    return !(n % 2);
 }
 
-console.log(correctPolishLetters("Jędrzej Błądziński"),"Jedrzej Bladzinski");
-console.log(correctPolishLetters("Lech Wałęsa"),"Lech Walesa");
-console.log(correctPolishLetters("Maria Skłodowska-Curie"),"Maria Sklodowska-Curie");
+console.log(testEven(0), true, "testEven for 0");
+console.log(testEven(0.5), false, "testEven for 0.5");
+console.log(testEven(1), false, "testEven for 1");
+console.log(testEven(2), true, "testEven for 2");
+console.log(testEven(-4), true, "testEven for 2");
+
+console.log('--------------------------');
+
+/*
+Will you make it?
+You were camping with your friends far away from home, but when it's time to go back, 
+you realize that your fuel is running out and the nearest pump is 50 miles away! 
+
+You know that on average, your car runs on about 25 miles per gallon. 
+
+There are 2 gallons left. Considering these factors, write a function that tells you 
+if it is possible to get to the pump or not. Function should return true (1 in Prolog) 
+if it is possible and false (0 in Prolog) if not. 
+
+The input values are always positive.
+*/
+
+function zeroFuel(distanceToPump, mpg, fuelLeft){
+    const PossibleDriveMiles = mpg * fuelLeft;
+
+    if (PossibleDriveMiles >= distanceToPump ) { return true
+    }
+    return false;
+  };
+
+
+
+console.log(zeroFuel(50, 25, 2), true);
+console.log(zeroFuel(100, 50, 1), false);
+
+console.log('-------------- Amziai ---------------')
+
+/*
+Find the Difference in Age between Oldest and Youngest Family Members
+
+At the annual family gathering, the family likes to find the oldest living 
+family member’s age and the youngest family member’s age and calculate the difference 
+between them.
+
+You will be given an array of all the family members' ages, in any order. 
+The ages will be given in whole numbers, so a baby of 5 months, 
+will have an ascribed ‘age’ of 0. Return a new array (a tuple in Python) 
+with [youngest age, oldest age, difference between the youngest and oldest age].
+*/
+
+function differenceInAges(ages){
+
+
+}
+
+console.log(differenceInAges([82, 15, 6, 38, 35]), '->', [6, 82, 76]);
+console.log(differenceInAges([57, 99, 14, 32]), '->', [14, 99, 85]);
+
+console.log('-------------- Vazonai ---------------')
+/* 
+Uzduotis
+  - duodama, kiek turim geliu
+  - duodama, kiek viana gele "susilaukia" nauju gelyciu
+  - duodama, kiek turiu vazonu
+  - reikai rasti, kiek vazonu truksta?
+*/
+
+function flowers (turimGeliu, naujosGeles, turimVazonu) {
+  const visoGeliu = turimGeliu * (1 + naujosGeles);
+  const reikiaVazonu = visoGeliu; 
+  const trukstaVazonu = reikiaVazonu - turimVazonu;
+  if (trukstaVazonu < 0) { return 0;
+  } return trukstaVazonu;
+}
+
+console.log (flowers (1,4,2), '->', 3);
+console.log(flowers(10, 1, 5), '->', 15); 
+console.log(flowers(10,2,100), '->, 0');
+console.log(flowers(0,200,0), '->, 0');
+
+console.log('-------------- Plytos ---------------')
+
+/* 
+PLYTOS
+  - gaunam, kiek sienu turi namas
+  - gaunam, kokio plocio yra kiekviena siena (metrais)
+  - sienos neturi angu ir/ar skyliu
+  - gaunam sienos auksti, kuris visu yra vienodas
+  - turim plytos dydi (aukstis ir plotis) (metrais)
+   - reikia suzinoti, keliu plytu mums reikes, jei plytu skldyti negalima
+*/
+
+function bricks(sienuPlociai, sienosAukstis, plytosAukstis, plytosPlotis){
+
+}
+
+console.log(bricks([1,2], 1, [0.1, 0.2]), '->', )
+
+

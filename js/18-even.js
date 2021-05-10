@@ -31,3 +31,4 @@ function even (t) {
 
 console.log(even (71), '->', false);
 console.log(even (4), '->', true);
+console.log(even (0.5), '->', false);
