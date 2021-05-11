@@ -482,6 +482,12 @@ function milk(uzsakymai, porcija, pienoIsKarves) {
   if (typeof uzsakymai !== 'number') {
       return 'ERROR: pirmas parametras turi buti skaicius';
   }
+  if (isNaN(uzsakymai)) {
+    return 'ERROR: pirmas parametras negali buti NaN';
+  }
+  if (!isFinite(uzsakymai)) { //isFinite() duoda false , !isFinite() - true 
+    return 'ERROR: pirmas parametras negali buti begalybe';
+  }
   if (uzsakymai < 0) {
       return 'ERROR: pirmas parametras negali buti neigiamas';
   }
@@ -495,6 +501,12 @@ function milk(uzsakymai, porcija, pienoIsKarves) {
   if (typeof porcija !== 'number') {
       return 'ERROR: antras parametras turi buti skaicius';
   }
+  if (isNaN(porcija)) {
+    return 'ERROR: antras parametras negali buti NaN';
+  }
+  if (!isFinite(porcija)) {
+    return 'ERROR: antras parametras negali buti begalybe';
+  }
   if (porcija < 0) {
       return 'ERROR: antras parametras negali buti neigiamas';
   }
@@ -505,9 +517,17 @@ function milk(uzsakymai, porcija, pienoIsKarves) {
   if (typeof pienoIsKarves !== 'number') {
       return 'ERROR: trecias parametras turi buti skaicius';
   }
+  if (isNaN(pienoIsKarves)) {
+    return 'ERROR: trecias parametras negali buti NaN';
+  }
+  if (!isFinite(pienoIsKarves)) {
+    return 'ERROR: trecias parametras negali buti begalybe';
+  }
   if (pienoIsKarves <= 0) {
       return 'ERROR: trecias parametras turi buti didesnis uz nuli';
   }
+
+
 
   // logic
   const reikiaPieno = uzsakymai * porcija;
@@ -533,7 +553,13 @@ console.log(milk(100, 0.5, 9), '->', 6);
 
 console.log(milk(NaN, 0.5, 9));
 console.log(milk(Infinity, 0.5, 9));
-console.log(milk(10, NaN, 9), '->', 1);
-console.log(milk(100, Infinity, 9), '->', 6);
-console.log(milk(10, 0.5, NaN), '->', 1);
-console.log(milk(100, 0.5, Infinity), '->', 6);
+console.log(milk(10, NaN, 9));
+console.log(milk(100, Infinity, 9));
+console.log(milk(10, 0.5, NaN));
+console.log(milk(100, 0.5, Infinity));
+
+console.log('-------------- Teksto suvienodinimas ---------------')
+
+/* 
+var paramText = param.toLowerCase();
+*/
